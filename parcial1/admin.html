@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Para los íconos -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="icon" type="image/x-icon" href="./recursos/utn.ico">
+	<link rel="stylesheet" type="text/css" href="./estilos/estilos.css">
+	<link rel="stylesheet" type="text/css" href="./estilos/menu.css">
+
+	<script src="./js/app.js" type="module" defer></script>
+
+	<title>Mis mascotas</title>
+</head>
+<body>
+
+<!-- Navegador horizontal inicio -->
+<ul class="topnav">
+	<li class="logo"><a href="./index.html"><img src="./recursos/logo.png"></a></li>
+	<li><a href="./index.html">Inicio</a></li>
+	<li><a href="./admin.html">Administración</a></li>
+</ul>
+<!-- Navegador horizontal fin -->
+
+<img src="./recursos/header.jpg" width="100%">
+
+<h2>Administración</h2>
+
+<fieldset>
+	<legend>Datos de la mascota</legend>
+	<div class="container">
+		<form>
+			<div class="row">
+				<div class="col-25">
+					<label for="txtTitulo">Título</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="txtTitulo" name="titulo" placeholder="Título del anuncio" maxlength="25">
+					<small></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="txtDescripcion">Descripción</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="txtDescripcion" name="descripcion" placeholder="Descripción"  maxlength="25">
+					<small></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+				<label>Animal</label>
+				</div>
+				<div class="col-75">
+					<input type="radio" id="rbPerro" name="animal" value="perro">
+					<label for="rbPerro">Perro</label>
+					<input type="radio" id="rbGato" name="animal" value="gato">
+					<label for="rbGato">Gato</label>
+					<small></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="txtPrecio">Precio</label>
+				</div>
+				<div class="col-75">
+					<input id="txtPrecio" name="precio" placeholder="Precio" type="number" min="0" max="50000">
+					<small></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="txtRaza" class="caracteristicas"><img src="./recursos/raza.png" width="36" height="36"></label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="txtRaza" name="raza" placeholder="Raza">
+					<small></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="txtNacimiento" class="caracteristicas"><img src="./recursos/calendario.png" width="36" height="36"></label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="txtNacimiento" name="nacimiento" placeholder="dd/mm/aaaa">
+					<small></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-25">
+					<label for="txtVacunas" class="caracteristicas"><img src="./recursos/vacunas.png" width="36" height="36"></label>
+				</div>
+				<div class="col-75">
+					<select id="txtVacunas" name="vacunas" type="text">
+						<option value="">--Elegir--</option>
+						<option value="si">Si</option>
+						<option value="no">No</option>
+					</select>
+					<small></small>
+				</div>
+			</div>
+
+
+		<br>
+
+		<div class="row">
+			<button class="btn" type="submit" ><i class="fa fa-close"></i> Guardar</button>
+			<!-- <input type="submit" value="Guardar"> -->
+			<input type="button" id="btnEliminar" value="Eliminar" class="edicion">
+			<input type="button" id="btnCancelar" value="Cancelar" class="edicion">
+		</div>
+
+
+		</form>
+	</div>
+</fieldset>
+
+<br>
+<fieldset>
+	<legend>Listado de mascotas</legend>
+	<div class="container">
+		<div id="divTabla"></div>
+	</div>
+</fieldset>
+
+<footer>
+	<ul class="foot">
+		<li><a href="./index.html">Inicio</a></li>
+		<li><a href="./admin.html">Administración</a></li>
+		<li class="right">Todos los Derechos Reservados 2022</li>
+	</ul>
+</footer>
+
+</body>
+</html>

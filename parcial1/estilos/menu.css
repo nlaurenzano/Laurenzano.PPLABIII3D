@@ -1,0 +1,38 @@
+ul.topnav, ul.foot {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: right;}
+ul.foot li {float: left;}
+
+ul.topnav li a, ul.foot li a, ul.foot li {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover, ul.foot li a:hover {background-color: #ccc;}
+
+ul.topnav li.logo {float: left;}
+ul.foot li.right {float: right;}
+
+/* Responsividad - Cuando la pantalla tiene menos de 600px de ancho, 
+los links se apilan, en lugar de estar uno junto al otro. */
+@media screen and (max-width: 600px) {
+  ul.topnav li.logo,
+  ul.topnav li, 
+  ul.foot li, 
+  ul.foot li.right {float: none;}
+}
+
+footer {
+  padding: 0px;
+  background-color: #96D4D4;
+  color: white;
+}
